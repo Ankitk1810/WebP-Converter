@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Any Image Format to WebP Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Any Image Format to WebP Converter</h1>
+
+    <div id="dropZone">
+        <div class="container">
+            <div class="folder">
+                <div class="front-side">
+                    <div class="tip"></div>
+                    <div class="cover"></div>
+                </div>
+                <div class="back-side cover"></div>
+            </div>
+            <label class="custom-file-upload">
+                Upload The Images
+            </label>
+        </div>
+
+    </div>
+    <input type="file" id="fileInput" accept="image/*" multiple>
+
+
+    <div id="filePreviewContainer"></div>
+
+    <div id="conversionSettings">
+        <label for="qualitySlider">Quality (0 - 100):</label>
+        <input type="range" id="qualitySlider" min="0" max="100" value="100">
+    </div>
+
+    <div class="btn-container" id="btn-container">
+        <div class="messagedisplayer">
+            <!-- <div class="loader"></div> -->
+        </div>
+        
+        <div class="btn-wrapper">
+            <button id="convertBtn" onclick="convertToWebP()">Convert to WebP</button>
+            <button id="downloadBtn" onclick="downloadZip()">Please Wait</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
